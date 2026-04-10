@@ -15,7 +15,6 @@ defineProps<Props>();
       v-for="country in countries"
       :key="country.cca3"
       :country="country"
-      class="transition-transform duration-300 hover:scale-105"
     />
   </div>
 </template>

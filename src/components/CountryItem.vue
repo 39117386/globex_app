@@ -5,32 +5,45 @@ interface Props {
   country: Country;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 </script>
 
 <template>
-  <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-blue-500 hover:shadow-blue-500/25 transition-all duration-300">
-    <div class="h-48 overflow-hidden">
+  <article
+    class="group overflow-hidden rounded-xl border border-white/10 bg-slate-800/80 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30"
+  >
+    <div class="aspect-[16/9] max-h-44 overflow-hidden rounded-t-xl">
       <img
-        class="w-full h-full object-cover"
-        :src="country.flags.png"
-        :alt="country.flags.alt"
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        :src="props.country.flags.png"
+        :alt="props.country.flags.alt || `Flag of ${props.country.name.common}`"
       />
     </div>
-    <div class="p-4">
-      <h4 class="text-xl font-bold text-blue-400 mb-2">{{ country.name.common }}</h4>
-      <p class="text-sm text-gray-300 mb-1">
-        <span class="text-purple-400 font-semibold">Capital:</span>
-        {{ country.capital?.[0] || 'N/A' }}
-      </p>
-      <p class="text-sm text-gray-300 mb-1">
-        <span class="text-green-400 font-semibold">Population:</span>
-        {{ country.population?.toLocaleString() || 'N/A' }}
-      </p>
-      <p class="text-sm text-gray-300">
-        <span class="text-pink-400 font-semibold">Region:</span>
-        {{ country.region }}
-      </p>
+    <div class="space-y-4 p-5">
+      <h4 class="font-sans text-xl font-bold tracking-tight text-white">
+        {{ props.country.name.common }}
+      </h4>
+
+      <div class="space-y-2 text-sm text-gray-400">
+        <p class="flex items-center justify-between gap-3">
+          <span class="text-gray-500">Population</span>
+          <span class="font-medium text-gray-300">
+            {{ props.country.population?.toLocaleString() || "N/A" }}
+          </span>
+        </p>
+        <p class="flex items-center justify-between gap-3">
+          <span class="text-gray-500">Continent</span>
+          <span class="font-medium text-gray-300">
+            {{ props.country.region || "N/A" }}
+          </span>
+        </p>
+        <p class="flex items-center justify-between gap-3">
+          <span class="text-gray-500">Capital</span>
+          <span class="font-medium text-gray-300">
+            {{ props.country.capital?.[0] || "N/A" }}
+          </span>
+        </p>
+      </div>
     </div>
-  </div>
+  </article>
 </template>
