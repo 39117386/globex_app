@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
 import { Country } from "../models/country.model";
 import CountryItem from "./CountryItem.vue";
 
@@ -11,12 +10,12 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-    <div
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <CountryItem
       v-for="country in countries"
-      class="border border-gray-300 rounded p-3"
-    >
-      <CountryItem :country="country" />
-    </div>
+      :key="country.cca3"
+      :country="country"
+      class="transition-transform duration-300 hover:scale-105"
+    />
   </div>
 </template>

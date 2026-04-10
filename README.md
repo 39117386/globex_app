@@ -1,18 +1,40 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+🚀 Tecnologías usadas en el proyecto
+⚙️ Frontend
+Vue.js
+TypeScript
+Vite (si lo usaste, común en Vue moderno)
+🌐 Consumo de API
+Axios
+REST Countries API
+🎨 Estilos (si lo estás usando típico Vue projects)
+CSS / SCSS o CSS Modules (según tu proyecto)
+Posible Tailwind CSS (si lo agregaste después)
+🧠 Conceptos utilizados
+Composition API (ref, reactive, computed)
+Lifecycle hooks (onMounted)
+Watchers (watch)
+Filtrado y búsqueda de datos
+Manejo de estado reactivo
+Consumo de APIs REST
+📦 Herramientas de desarrollo
+Node.js
+npm / yarn / pnpm
+Git & GitHub   
+//     //////////////////////////////                    /////////////////////////////////////////////////
+## 🛠️ Tech Stack
 
-## Recommended IDE Setup
+- Vue 3 (Composition API)
+- TypeScript
+- Axios
+- Vite
+- REST Countries API
+- CSS / Responsive Design
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 🌍 Features
 
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- Fetch data from external API
+- Search countries dynamically
+- Filter and pagination logic
+- Reactive UI with Vue Composition API
+- Clean and modern interface
